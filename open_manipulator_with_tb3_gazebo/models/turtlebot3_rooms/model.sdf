@@ -368,7 +368,7 @@
         </surface>
       </collision>
     </link>
-      <link name='link_0'>
+      <link name='link_5'>
         <pose frame=''>-1.50431 3.99994 0 0 -0 0</pose>
         <inertial>
           <mass>0.00123934</mass>
