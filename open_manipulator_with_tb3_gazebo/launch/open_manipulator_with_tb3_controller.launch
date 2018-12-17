@@ -1,5 +1,5 @@
 <launch>
-  <arg name="use_robot_name"         default="open_manipulator"/>
+  <arg name="use_robot_name"         default="om_with_tb3"/>
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
   <rosparam file="$(find open_manipulator_with_tb3_gazebo)/config/open_manipulator_with_tb3_controller.yaml" command="load"/>
