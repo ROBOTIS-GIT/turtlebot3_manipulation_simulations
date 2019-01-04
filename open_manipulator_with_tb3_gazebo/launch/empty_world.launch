@@ -34,7 +34,7 @@
     </node>
 
     <node pkg="gazebo_ros" type="spawn_model" name="urdf_spawner" respawn="false" output="screen"
-       args="-urdf -model $(arg use_robot_name) -x 0.0 -y 0.0 -J joint2 -1.5707 -J joint3 1.37 -J joint4 0.2258 -param robot_description"/>
+       args="-urdf -model $(arg use_robot_name) -x 0.0 -y 0.0 -Y 0.0 -J joint2 -1.5707 -J joint3 1.37 -J joint4 0.2258 -param robot_description"/>
   </group>
 
   <!-- ros_control robotis manipulator launch file -->
