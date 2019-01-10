@@ -368,7 +368,7 @@
         </surface>
       </collision>
     </link>
-      <link name='link_0'>
+      <link name='link_5'>
         <pose frame=''>-1.50431 3.99994 0 0 -0 0</pose>
         <inertial>
           <mass>0.00123934</mass>
@@ -840,29 +840,59 @@
         <static>1</static>
         <link name='link'>
           <visual name='visual'>
-            <geometry>
+            <!-- <geometry>
               <mesh>
                 <uri>model://turtlebot3_rooms/ar_marker/meshes/Marker0.dae</uri>
                 <scale>0.1 0.1 0.1</scale>
               </mesh>
+
+              <script>
+                <uri>model://turtlebot3_rooms/ar_marker/materials/scripts</uri>
+                <uri>model://turtlebot3_rooms/ar_marker/materials/textures</uri>
+                <name>ar_marker</name>
+              </script>
+            </geometry> -->
+            <geometry>
+              <box>
+                <size>0.05 0.001 0.05</size>
+              </box>
             </geometry>
+            <material>
+              <script>
+                  <uri>model://turtlebot3_rooms/ar_marker/materials/scripts</uri>
+                  <uri>model://turtlebot3_rooms/ar_marker/materials/textures</uri>
+                  <name>ar_marker</name>
+              </script>
+            </material>
           </visual>
         </link>
-        <pose frame=''>-1.5 3.92 0.066 0 0 -1.5708</pose>
+        <pose frame=''>-1.5 3.92 0.096 0 0 0</pose>
       </model>
       <model name='ar_marker_clone'>
         <static>1</static>
         <link name='link'>
           <visual name='visual'>
-            <geometry>
+            <!-- <geometry>
               <mesh>
                 <uri>model://turtlebot3_rooms/ar_marker/meshes/Marker0.dae</uri>
                 <scale>0.1 0.1 0.1</scale>
               </mesh>
+            </geometry> -->
+            <geometry>
+              <box>
+                <size>0.05 0.001 0.05</size>
+              </box>
             </geometry>
+            <material>
+              <script>
+                  <uri>model://turtlebot3_rooms/ar_marker/materials/scripts</uri>
+                  <uri>model://turtlebot3_rooms/ar_marker/materials/textures</uri>
+                  <name>ar_marker</name>
+              </script>
+            </material>
           </visual>
         </link>
-        <pose frame=''>0.68 4.21 0.066 0 0 -1.5708</pose>
+        <pose frame=''>0.68 4.21 0.096 0 0 0</pose>
       </model>
       <model name='rooms'>
         <pose frame=''>0 1.99994 0 0 -0 0</pose>
