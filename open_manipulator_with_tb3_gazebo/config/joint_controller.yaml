@@ -24,7 +24,3 @@ om_with_tb3:
   gripper_position:
     type: position_controllers/JointPositionController
     joint: gripper
-
-  gripper_sub_position:
-    type: position_controllers/JointPositionController
-    joint: gripper_sub

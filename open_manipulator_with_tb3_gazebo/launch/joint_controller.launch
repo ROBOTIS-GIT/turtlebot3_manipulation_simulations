@@ -11,10 +11,6 @@
                                                   joint2_position
                                                   joint3_position
                                                   joint4_position
-                                                  gripper_position
-                                                  gripper_sub_position"/>
-
-  <!-- Run gripper sub position publisher -->
-  <node name="gripper_sub_publisher" pkg="open_manipulator_gazebo" type="gripper_sub_publisher" output="screen" ns="$(arg use_robot_name)"/>
+                                                  gripper_position"/>
 
 </launch>
