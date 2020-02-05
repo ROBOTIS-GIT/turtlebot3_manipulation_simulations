@@ -35,11 +35,3 @@ gazebo_ros_control:
       i_clamp: 0.2
       antiwindup: false
       publish_state: true
-    gripper_sub:
-      p: 100000.0
-      i: 250.0
-      d: 1000.0
-      i_clamp: 0.2
-      antiwindup: false
-      publish_state: true
-

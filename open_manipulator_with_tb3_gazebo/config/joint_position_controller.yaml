@@ -1,9 +1,4 @@
 om_with_tb3:
-  # Publish all joint states -----------------------------------
-  joint_state_controller:
-    type: joint_state_controller/JointStateController
-    publish_rate: 1000
-
   # Position Controllers ---------------------------------------
   joint1_position:
     type: position_controllers/JointPositionController
@@ -24,7 +19,3 @@ om_with_tb3:
   gripper_position:
     type: position_controllers/JointPositionController
     joint: gripper
-
-  gripper_sub_position:
-    type: position_controllers/JointPositionController
-    joint: gripper_sub
