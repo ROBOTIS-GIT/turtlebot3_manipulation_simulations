@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="use_robot_name"         default="om_with_tb3"/>
 
   <!-- Robot state publisher -->
   <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
@@ -15,6 +14,6 @@
   <!-- joint_state_controller -->
   <rosparam file="$(find open_manipulator_with_tb3_gazebo)/config/joint_state_controller.yaml" command="load"/>
   <node name="joint_state_controller_spawner" pkg="controller_manager" type="controller_manager" output="screen"
-    ns="$(arg use_robot_name)" args="spawn joint_state_controller" respawn="false"/>
+    args="spawn joint_state_controller" respawn="false"/>
 
 </launch>
