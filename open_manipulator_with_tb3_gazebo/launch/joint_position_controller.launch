@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <launch>
   <!-- Load joint controller configurations from YAML file to parameter server -->
   <rosparam file="$(find open_manipulator_with_tb3_gazebo)/config/joint_position_controller.yaml" command="load"/>
@@ -7,7 +8,6 @@
   output="screen" args="joint1_position
                         joint2_position
                         joint3_position
-                        joint4_position
-                        gripper_position"/>
+                        joint4_position"/>
 
 </launch>
