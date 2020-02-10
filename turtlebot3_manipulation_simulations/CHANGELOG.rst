@@ -1,6 +1,16 @@
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package open_manipulator_with_tb3_gazebo
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package turtlebot3_manipulation_simulations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2.0.1 (2020-02-10)
+------------------
+* removed namespace
+* changed travis email address
+* fixed transmission
+* added new moveit_config
+* updated launch files in description
+* removed old moveit files
+* changed package name to turtlebot3_manipulation
 
 1.1.0 (2019-02-08)
 ------------------
