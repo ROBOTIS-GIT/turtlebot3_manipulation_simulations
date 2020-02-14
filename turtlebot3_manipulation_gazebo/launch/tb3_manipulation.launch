@@ -13,7 +13,7 @@
   </include>
 
   <!-- send robot urdf to param server -->
-  <include file="$(find turtlebot3_manipulation_description)/launch/tb3_omx_upload.launch">
+  <include file="$(find turtlebot3_manipulation_description)/launch/tb3_manipulation_upload.launch">
     <arg name="model" value="$(arg model)"/>
   </include>
 
