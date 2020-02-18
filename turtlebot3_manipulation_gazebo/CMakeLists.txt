@@ -9,15 +9,7 @@ add_compile_options(-std=c++11)
 ################################################################################
 # Find catkin packages and libraries for catkin and system dependencies
 ################################################################################
-find_package(catkin REQUIRED
-  COMPONENTS
-    gazebo_ros
-    gazebo_ros_control
-    controller_manager
-    xacro
-    urdf
-)
-
+find_package(catkin REQUIRED)
 find_package(gazebo REQUIRED)
 
 ################################################################################
@@ -35,14 +27,7 @@ find_package(gazebo REQUIRED)
 ################################################################################
 # Declare catkin specific configuration to be passed to dependent projects
 ################################################################################
-catkin_package(
-  CATKIN_DEPENDS
-    gazebo_ros
-    gazebo_ros_control
-    controller_manager
-    xacro
-    urdf
-)
+catkin_package()
 
 ################################################################################
 # Build

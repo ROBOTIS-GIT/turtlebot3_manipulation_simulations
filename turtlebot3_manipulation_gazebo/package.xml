@@ -14,9 +14,8 @@
   <url type="bugtracker">https://github.com/ROBOTIS-GIT/turtlebot3_manipulation_simulations/issues</url>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <depend>gazebo_ros</depend>
-  <depend>gazebo_ros_control</depend>
   <depend>controller_manager</depend>
+  <depend>gazebo_ros</depend>
   <depend>xacro</depend>
   <depend>urdf</depend>
 </package>
