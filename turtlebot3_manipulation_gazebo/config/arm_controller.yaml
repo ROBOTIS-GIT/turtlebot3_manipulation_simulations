@@ -15,10 +15,3 @@ arm_controller:
   stop_trajectory_duration: 0.5
   state_publish_rate:  25
   action_monitor_rate: 10
-
-gazebo_ros_control:
-  pid_gains:
-    joint1: {p: 100.0, i: 0.1, d: 1.0}
-    joint2: {p: 100.0, i: 0.1, d: 1.0}
-    joint3: {p: 100.0, i: 0.1, d: 1.0}
-    joint4: {p: 100.0, i: 0.1, d: 1.0}
