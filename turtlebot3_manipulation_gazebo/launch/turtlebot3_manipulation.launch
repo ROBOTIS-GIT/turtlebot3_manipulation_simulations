@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <launch>
   <arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [waffle, waffle_pi]"/>
   <arg name="gui" default="true"/>
