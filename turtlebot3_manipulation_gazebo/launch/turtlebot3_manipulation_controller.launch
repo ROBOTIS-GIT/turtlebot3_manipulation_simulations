@@ -1,0 +1,9 @@
+<launch>
+  <!-- arm controller -->
+  <rosparam file="$(find turtlebot3_manipulation_gazebo)/config/arm_controller.yaml" command="load"/>
+  <node name="arm_controller_spawner" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="spawn arm_controller"/>
+
+  <!-- gripper controller -->
+  <rosparam file="$(find turtlebot3_manipulation_gazebo)/config/gripper_controller.yaml" command="load"/>
+  <node name="gripper_controller_spawner" pkg="controller_manager" type="controller_manager" respawn="false" output="screen" args="spawn gripper_controller"/>
+</launch>
