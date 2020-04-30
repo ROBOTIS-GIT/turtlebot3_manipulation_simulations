@@ -26,6 +26,6 @@
   <include file="$(find turtlebot3_manipulation_gazebo)/launch/controller_utils.launch"/>
 
   <!-- run controllers -->
-  <include file="$(find turtlebot3_manipulation_gazebo)/launch/turtlebot3_manipulation_controller.launch/">
+  <include file="$(find turtlebot3_manipulation_gazebo)/launch/turtlebot3_manipulation_controller.launch"/>
 
 </launch>
