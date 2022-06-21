@@ -2,6 +2,10 @@
 Changelog for package turtlebot3_manipulation_simulations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.1.0 (2022-06-16)
+------------------
+* ROS2 Foxy supported
+
 2.0.1 (2020-02-12)
 ------------------
 * removed namespace

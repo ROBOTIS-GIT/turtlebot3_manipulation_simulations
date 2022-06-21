@@ -1,7 +1,30 @@
-gazebo_ros_control:
-  pid_gains:
-    joint1: {p: 300.0, i: 0.1, d: 1.0, i_clamp: 0.2}
-    joint2: {p: 300.0, i: 0.1, d: 1.0, i_clamp: 0.2}
-    joint3: {p: 300.0, i: 0.1, d: 1.0, i_clamp: 0.2}
-    joint4: {p: 300.0, i: 0.1, d: 1.0, i_clamp: 0.2}
-    gripper_sub: {p: 300.0, i: 0.1, d: 1.0, i_clamp: 0.2}
+controller_manager:
+  ros__parameters:
+    update_rate: 100  #Hz
+
+    joint_trajectory_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+joint_trajectory_controller:
+  ros__parameters:
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+    interface_name: position
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+# gazebo_ros_control:
+  # pid_gains:
+  #   joint1: {p: 300.0, i: 0.1, d: 1.0, i_clamp: 0.2}
+  #   joint2: {p: 300.0, i: 0.1, d: 1.0, i_clamp: 0.2}
+  #   joint3: {p: 300.0, i: 0.1, d: 1.0, i_clamp: 0.2}
+  #   joint4: {p: 300.0, i: 0.1, d: 1.0, i_clamp: 0.2}
+  #   gripper_sub: {p: 300.0, i: 0.1, d: 1.0, i_clamp: 0.2}

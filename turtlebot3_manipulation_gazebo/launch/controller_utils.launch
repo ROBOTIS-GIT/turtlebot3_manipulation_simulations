@@ -1,6 +1,0 @@
-<launch>
-  <!-- start joint state controller -->
-  <rosparam file="$(find turtlebot3_manipulation_gazebo)/config/joint_state_controller.yaml" command="load"/>
-  <node name="joint_state_controller_spawner" pkg="controller_manager" type="controller_manager" output="screen"
-    args="spawn joint_state_controller" respawn="false"/>
-</launch>
