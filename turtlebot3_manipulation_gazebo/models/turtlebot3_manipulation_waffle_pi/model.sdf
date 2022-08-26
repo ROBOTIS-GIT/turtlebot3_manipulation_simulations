@@ -270,7 +270,7 @@
       </collision>
 
       <visual name="wheel_right_visual">
-        <pose>0.0 -0.144 0.023 0 0 0</pose>
+        <pose>0.0 -0.144 0.023 0 0 3.1415926</pose>
         <geometry>
           <mesh>
             <uri>model://turtlebot3_manipulation_waffle_pi/meshes/tire.dae</uri>
@@ -527,7 +527,7 @@
       </visual>
     </link>
 
-    <link name="gripper_l_link">
+    <link name="gripper_link">
       <inertial>
         <pose>0.15 0.021 0.296 0 0 0</pose>
         <inertia>
@@ -552,7 +552,7 @@
       </visual>
     </link>
 
-    <link name="gripper_r_link">
+    <link name="gripper_link_sub">
       <inertial>
         <pose>0.15 -0.021 0.296 0 0 0</pose>
         <inertia>
@@ -748,9 +748,9 @@
       </limit>
     </joint>
 
-    <joint name="joint_gripper_l" type="prismatic">
+    <joint name="gripper" type="prismatic">
       <parent>link5</parent>
-      <child>gripper_l_link</child>
+      <child>gripper_link</child>
       <pose>0.15 0.021 0.296 0 0 0 0</pose>
       <axis>
         <xyz>0 1 0</xyz>
@@ -765,12 +765,12 @@
       </limit>
     </joint>
 
-    <joint name="joint_gripper_r" type="prismatic">
+    <joint name="gripper_sub" type="prismatic">
       <mimic>
-        <joint>joint_gripper_l</joint>
+        <joint>gripper</joint>
       </mimic>
       <parent>link5</parent>
-      <child>gripper_r_link</child>
+      <child>gripper_link_sub</child>
       <pose>0.15 -0.021 0.296 0 0 0</pose>
       <axis>
         <xyz>0 -1 0</xyz>
@@ -831,7 +831,7 @@
       <joint_name>joint2</joint_name>
       <joint_name>joint3</joint_name>
       <joint_name>joint4</joint_name>
-      <joint_name>joint_gripper_l</joint_name>
+      <joint_name>gripper</joint_name>
     </plugin>
 
   </model>

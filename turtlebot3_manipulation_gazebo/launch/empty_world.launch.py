@@ -66,7 +66,9 @@ def generate_launch_description():
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
-        parameters=[params]
+        # parameters=[params]
+        parameters=[{'use_sim_time': use_sim_time}],
+        arguments=[urdf]
     )
     
     load_joint_state_controller = ExecuteProcess(
@@ -82,56 +84,56 @@ def generate_launch_description():
     )
 
     return LaunchDescription([
-        RegisterEventHandler(
-            event_handler=OnProcessExit(
-                target_action=spawn_entity,
-                on_exit=[load_joint_state_controller],
-            )
-        ),
-        RegisterEventHandler(
-            event_handler=OnProcessExit(
-                target_action=load_joint_state_controller,
-                on_exit=[load_joint_trajectory_controller],
-            )
-        ),
-        gazebo,
-        node_robot_state_publisher,
-        spawn_entity,
-
-        # DeclareLaunchArgument(
-        #     'use_sim_time',
-        #     default_value='false',
-        #     description='Use simulation (Gazebo) clock if true'),
-
-        # IncludeLaunchDescription(
-        #     PythonLaunchDescriptionSource(
-        #         os.path.join(pkg_gazebo_ros, 'launch', 'gzserver.launch.py')
-        #     ),
-        #     launch_arguments={'world': world}.items(),
+        # RegisterEventHandler(
+        #     event_handler=OnProcessExit(
+        #         target_action=spawn_entity,
+        #         on_exit=[load_joint_state_controller],
+        #     )
         # ),
-
-        # IncludeLaunchDescription(
-        #     PythonLaunchDescriptionSource(
-        #         os.path.join(pkg_gazebo_ros, 'launch', 'gzclient.launch.py')
-        #     ),
+        # RegisterEventHandler(
+        #     event_handler=OnProcessExit(
+        #         target_action=load_joint_state_controller,
+        #         on_exit=[load_joint_trajectory_controller],
+        #     )
         # ),
+        # gazebo,
+        # node_robot_state_publisher,
+        # spawn_entity,
+
+        DeclareLaunchArgument(
+            'use_sim_time',
+            default_value='false',
+            description='Use simulation (Gazebo) clock if true'),
+
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(
+                os.path.join(pkg_gazebo_ros, 'launch', 'gzserver.launch.py')
+            ),
+            launch_arguments={'world': world}.items(),
+        ),
+
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource(
+                os.path.join(pkg_gazebo_ros, 'launch', 'gzclient.launch.py')
+            ),
+        ),
 
         # ExecuteProcess(
         #     cmd=['ros2', 'param', 'set', '/gazebo', 'use_sim_time', use_sim_time],
         #     output='screen'),
 
-        # IncludeLaunchDescription(
-        #     PythonLaunchDescriptionSource([launch_file_dir, '/robot_state_publisher.launch.py']),
-        #     launch_arguments={'use_sim_time': use_sim_time}.items(),
-        # ),
+        IncludeLaunchDescription(
+            PythonLaunchDescriptionSource([launch_file_dir, '/robot_state_publisher.launch.py']),
+            launch_arguments={'use_sim_time': use_sim_time}.items(),
+        ),
 
-        # Node(
-        #     package='robot_state_publisher',
-        #     executable='robot_state_publisher',
-        #     name='robot_state_publisher',
-        #     output='screen',
-        #     parameters=[{'use_sim_time': use_sim_time}],
-        #     arguments=[urdf]),
+        Node(
+            package='robot_state_publisher',
+            executable='robot_state_publisher',
+            name='robot_state_publisher',
+            output='screen',
+            parameters=[{'use_sim_time': use_sim_time}],
+            arguments=[urdf]),
 
         # Node(
         #     package='controller_manager',
